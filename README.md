@@ -48,7 +48,7 @@ Grietas/
 | **Magnetic Yoke** | Mild Steel / Iron Plate ($55 \times 12 \times 3\text{ mm}$) | 1 | Scrap | Backing plate to close the magnetic flux circuit ("U" shape) |
 | **Display** | **0.96" I2C OLED SSD1306** ($128 \times 64$, 4-pin IIC) | 1 | ~€1.81 | Real-time graphical UI (Bar graph, status, gradient values, threshold) — [AliExpress `1005006141235306`](https://de.aliexpress.com/item/1005006141235306.html) |
 | **Acoustic Alert** | **SFM-20B Active Piezo Buzzer** (DC 3–24V, 95 dB) | 1 (of 5) | ~€2.26 (5pcs) | High-decibel continuous beep alarm on defect detection — [AliExpress `1005012810667051`](https://de.aliexpress.com/item/1005012810667051.html) |
-| **Input** | Tactile Pushbutton (or `GP2` to `GND` / `RESET`) | 1 | ~€0.20 | Calibration / Tare trigger (note: pressing RP2040-Zero `RESET` also re-runs `calibrar()` on boot) |
+| **Input** | Tactile Pushbutton (or `GP2` to `GND` / `RESET`) | 1 | ~€0.20 | Calibration / Tare trigger (note: pressing RP2040-Zero `RESET` also re-runs `calibrate()` on boot) |
 | **Power** | Standard 5V Powerbank / USB-C | 1 | Existing | Portable power supply |
 
 ### Tier 2: Eddy Current System (Tang Nano 9K FPGA Upgrade)
@@ -159,7 +159,7 @@ $$f_r = \frac{1}{2\pi \sqrt{L C_1}}$$
 ```
 
 ### 4.2 4-Zone Calibration Standard (Specimen Spec)
-To map thresholds (`umbral`) for different defect classes:
+To map thresholds (`threshold`) for different defect classes:
 - **Zone 1 (0–7 cm): Sound Reference Weld.** High quality, clean bead used for pressing Tare (`GP2`).
 - **Zone 2 (7–14 cm): Lack of Fusion / Root Defect.** Reduced heat input with wire spacer in root gap, capped over.
 - **Zone 3 (14–21 cm): Slag Inclusion.** SMAW E6013 pass over unchipped slag to encapsulate non-magnetic silicates (1–3 mm depth).

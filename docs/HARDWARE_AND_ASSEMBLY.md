@@ -25,7 +25,7 @@
 
 - **RP2040-Zero ([`1005009048313892`](https://de.aliexpress.com/item/1005009048313892.html)):**
   - Powered via USB-C. Use the `3V3` pin to power both **S49E** sensors and the **0.96" OLED** so the analog output range matches the RP2040 ADC's $0\text{–}3.3\text{ V}$ reference.
-  - Because `setup()` runs `calibrar()` automatically on startup, you can also trigger a fresh Tare calibration at any time using the RP2040-Zero's on-board **RESET** button even if you do not wire an external pushbutton to `GP2`.
+  - Because `setup()` runs `calibrate()` automatically on startup, you can also trigger a fresh Tare calibration at any time using the RP2040-Zero's on-board **RESET** button even if you do not wire an external pushbutton to `GP2`.
 - **10× S49E Linear Hall Sensors ([`1005006061649001`](https://de.aliexpress.com/item/1005006061649001.html)):**
   - Looking at the flat face with the `49E` marking and leads pointing down (left to right):
     1. **Pin 1 (Left):** `VCC` ($3.3\text{ V}$)
@@ -39,7 +39,7 @@
   - Magnetized through the $5\text{ mm}$ thickness. Use a spare S49E sensor or compass before gluing to verify that one magnet has its **North** pole facing the workpiece and the other has its **South** pole facing the workpiece.
 
 ### 1.2 4-Zone Calibration Standard (Reference Specimen)
-Fabricate a $28\text{ cm}$ test weld plate divided into four $7\text{ cm}$ zones to calibrate and verify detection thresholds (`umbral`):
+Fabricate a $28\text{ cm}$ test weld plate divided into four $7\text{ cm}$ zones to calibrate and verify detection thresholds (`threshold`):
 
 ```text
 +-----------------+-----------------+-----------------+-----------------+
@@ -51,7 +51,7 @@ Fabricate a $28\text{ cm}$ test weld plate divided into four $7\text{ cm}$ zones
 +-----------------+-----------------+-----------------+-----------------+
 ```
 
-1. **Zone 1 (0–7 cm) — Sound Reference Weld:** High-quality, homogeneous bead. Place the probe here and press **Calibration (`GP2`)** to zero `offsetDiferencial`.
+1. **Zone 1 (0–7 cm) — Sound Reference Weld:** High-quality, homogeneous bead. Place the probe here and press **Calibration (`GP2`)** to zero `differentialOffset`.
 2. **Zone 2 (7–14 cm) — Lack of Fusion / Root Defect:** Welded with reduced heat input and a wire spacer in the root gap, then capped over.
 3. **Zone 3 (14–21 cm) — Slag Inclusion:** SMAW E6013 pass laid over unchipped slag to encapsulate non-magnetic silicates at $1\text{–}3\text{ mm}$ depth.
 4. **Zone 4 (21–28 cm) — Surface/Sub-surface Crack:** Copper-induced hot crack or a fine $0.8\text{ mm}$ mechanical saw cut capped over.
