@@ -24,6 +24,7 @@ Adafruit_NeoPixel ledRGB(1, pinRGB, NEO_GRB + NEO_KHZ800);
 void calibrar();
 
 void setup() {
+  Serial.begin(115200);
   analogReadResolution(12);
   pinMode(pinBoton, INPUT_PULLUP);
   pinMode(pinAlarma, OUTPUT);
@@ -60,6 +61,18 @@ void loop() {
   // DIFFERENTIAL SUBTRACTION: Rejects lift-off, vibration, and background drift
   int gradiente = abs((int)((lec1 - lec2) - offsetDiferencial));
   bool falla = (gradiente > umbral);
+
+  // USB Serial Telemetry (Arduino Serial Plotter & CSV compatible)
+  Serial.print("S1:");
+  Serial.print(lec1, 1);
+  Serial.print(",S2:");
+  Serial.print(lec2, 1);
+  Serial.print(",Grad:");
+  Serial.print(gradiente);
+  Serial.print(",Lim:");
+  Serial.print(umbral);
+  Serial.print(",Falla:");
+  Serial.println(falla ? 1 : 0);
 
   // Output Alerts
   digitalWrite(pinAlarma, falla ? HIGH : LOW);
