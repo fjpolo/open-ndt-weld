@@ -13,7 +13,10 @@ Open-source, low-cost, portable Non-Destructive Testing (NDT / END) alternatives
 Grietas/
 ├── README.md                              # Project specification & executive blueprint
 ├── docs/
-│   └── HARDWARE_AND_ASSEMBLY.md           # Probe construction, 4-zone specimen, AFE & calibration guide
+│   ├── HARDWARE_AND_ASSEMBLY.md           # Probe construction, 4-zone specimen, AFE & calibration guide
+│   └── images/                            # Exact wiring schematics & MFL probe diagrams
+├── hardware/
+│   └── mfl_gradiometer_housing.scad       # Parametric 3D-printable probe housing (OpenSCAD)
 ├── tier1-mfl-rp2040/                      # Subsystem 1: RP2040-Zero Differential MFL Gradiometer
 │   ├── platformio.ini                     # PlatformIO build configuration
 │   ├── src/

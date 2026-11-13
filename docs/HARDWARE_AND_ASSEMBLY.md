@@ -16,6 +16,7 @@
   - **Axial Layout:** $4\text{–}6\text{ mm}$ apart along the scan line (or **Vertical Layout** stacked $4\text{ mm}$ apart).
   - **Orientation:** Both SS49E sensors must face the exact same direction (flat face forward) so common-mode magnetic fields produce identical polarity voltages.
   - **Lift-Off Clearance:** Recess the sensors $2.5\text{–}3.0\text{ mm}$ above the weld crown and protect the base with Kapton or Teflon (PTFE) tape to attenuate micro-surface roughness and mechanical friction.
+  - **3D-Printable Housing:** Print [mfl_gradiometer_housing.scad](../hardware/mfl_gradiometer_housing.scad) in **PLA, PETG, or ABS** (non-magnetic, 0.2 mm layer height, 25%+ infill). It holds the $55 \times 12 \times 3\text{ mm}$ yoke, both $20 \times 10 \times 5\text{ mm}$ magnets at a $15\text{ mm}$ gap, and both S49E sensors flat-face down at $5.0\text{ mm}$ spacing and $2.7\text{ mm}$ lift-off.
 
 ### 1.1.1 Wiring Schematic & Notes for Your Purchased Components
 
