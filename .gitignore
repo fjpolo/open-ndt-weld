@@ -1,0 +1,12 @@
+# PlatformIO / Arduino
+.pio/
+.vscode/
+
+# Tang Nano 9K FPGA Build Artifacts
+tier2-et-tangnano9k/build/
+*.fs
+*.json
+!*_pnr.json
+
+# macOS / OS
+.DS_Store

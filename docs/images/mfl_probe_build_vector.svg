@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="northGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="southGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="workpieceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f8fafc"/>
+    </marker>
+    <marker id="fluxArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="leakArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#facc15"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="660" rx="12" fill="#0f172a"/>
+  <rect x="16" y="16" width="968" height="628" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="500" y="50" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">MFL Dual-Sensor Gradiometer Probe Assembly (Cross-Section)</text>
+  <text x="500" y="74" text-anchor="middle" fill="#94a3b8" font-size="14">All Materials Labeled — Ferromagnetic Steel Yoke, NdFeB Magnets, Non-Magnetic Spacer, &amp; Dual S49E Sensors</text>
+
+  <!-- Top Dimension: 55 mm Yoke Width -->
+  <line x1="200" y1="108" x2="800" y2="108" stroke="#f8fafc" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <line x1="200" y1="98" x2="200" y2="132" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="800" y1="98" x2="800" y2="132" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4"/>
+  <rect x="425" y="94" width="150" height="24" rx="4" fill="#1e293b"/>
+  <text x="500" y="111" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">55 mm Total Width</text>
+
+  <!-- Mild Steel Backing Yoke (55 x 12 x 3 mm) -->
+  <rect x="200" y="132" width="600" height="60" rx="4" fill="url(#steelGrad)" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="500" y="156" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">MILD STEEL BACKING YOKE (55 × 12 × 3 mm)</text>
+  <text x="500" y="176" text-anchor="middle" fill="#1e293b" font-size="12" font-weight="600">Ferromagnetic Steel — Closes upper magnetic flux path</text>
+  <!-- Subtle flux arrow at bottom edge of yoke -->
+  <path d="M 700 185 L 300 185" stroke="#0284c7" stroke-width="2" stroke-dasharray="7,5" marker-end="url(#fluxArrow)" opacity="0.7"/>
+
+  <!-- Non-Magnetic Sensor Holder / Spacer Block (3D-Printed PLA / PETG / Plastic) -->
+  <!-- Placed strictly in the central 15mm gap above the sensors so it never blocks the magnets -->
+  <rect x="380" y="192" width="240" height="68" fill="#334155" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="500" y="214" text-anchor="middle" fill="#cbd5e1" font-size="12" font-weight="700">Non-Magnetic Spacer / Holder</text>
+  <text x="500" y="231" text-anchor="middle" fill="#94a3b8" font-size="11">(3D-Printed PLA / PETG / Plastic — NOT Metal)</text>
+
+  <!-- 15 mm Gap Dimension -->
+  <line x1="380" y1="248" x2="620" y2="248" stroke="#f8fafc" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="442" y="237" width="116" height="20" rx="4" fill="#334155"/>
+  <text x="500" y="252" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="700">15 mm Air Gap</text>
+
+  <!-- Left Magnet 1 (20x10x5 mm) - S up, N down -->
+  <rect x="200" y="192" width="180" height="75" fill="url(#southGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="200" y="267" width="180" height="75" fill="url(#northGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="290" y="234" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">S POLE (Top)</text>
+  <text x="290" y="300" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">N POLE (Down)</text>
+  <text x="290" y="322" text-anchor="middle" fill="#fee2e2" font-size="12">NdFeB N35 (20×10×5 mm)</text>
+
+  <!-- Right Magnet 2 (20x10x5 mm) - N up, S down -->
+  <rect x="620" y="192" width="180" height="75" fill="url(#northGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="620" y="267" width="180" height="75" fill="url(#southGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="710" y="234" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">N POLE (Top)</text>
+  <text x="710" y="300" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">S POLE (Down)</text>
+  <text x="710" y="322" text-anchor="middle" fill="#dbeafe" font-size="12">NdFeB N35 (20×10×5 mm)</text>
+
+  <!-- Sensor 1 (S49E -> GP26) -->
+  <g transform="translate(435, 272)">
+    <!-- Leads going up into spacer -->
+    <line x1="12" y1="-12" x2="12" y2="10" stroke="#ef4444" stroke-width="3"/>
+    <line x1="25" y1="-12" x2="25" y2="10" stroke="#94a3b8" stroke-width="3"/>
+    <line x1="38" y1="-12" x2="38" y2="10" stroke="#facc15" stroke-width="3"/>
+    <!-- TO-92 Body -->
+    <rect x="0" y="10" width="50" height="36" rx="4" fill="#0f172a" stroke="#facc15" stroke-width="2"/>
+    <text x="25" y="26" text-anchor="middle" fill="#facc15" font-size="11" font-weight="700">S49E #1</text>
+    <text x="25" y="40" text-anchor="middle" fill="#e2e8f0" font-size="10">GP26 (A0)</text>
+  </g>
+
+  <!-- Sensor 2 (S49E -> GP27) -->
+  <g transform="translate(515, 272)">
+    <!-- Leads going up into spacer -->
+    <line x1="12" y1="-12" x2="12" y2="10" stroke="#ef4444" stroke-width="3"/>
+    <line x1="25" y1="-12" x2="25" y2="10" stroke="#94a3b8" stroke-width="3"/>
+    <line x1="38" y1="-12" x2="38" y2="10" stroke="#fb923c" stroke-width="3"/>
+    <!-- TO-92 Body -->
+    <rect x="0" y="10" width="50" height="36" rx="4" fill="#0f172a" stroke="#fb923c" stroke-width="2"/>
+    <text x="25" y="26" text-anchor="middle" fill="#fb923c" font-size="11" font-weight="700">S49E #2</text>
+    <text x="25" y="40" text-anchor="middle" fill="#e2e8f0" font-size="10">GP27 (A1)</text>
+  </g>
+
+  <!-- 4-6 mm Sensor Spacing Dimension -->
+  <line x1="460" y1="330" x2="540" y2="330" stroke="#facc15" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="500" y="346" text-anchor="middle" fill="#fde047" font-size="12" font-weight="600">4–6 mm Spacing</text>
+
+  <!-- Protective Teflon / Kapton Tape Layer (under magnets) -->
+  <rect x="190" y="355" width="620" height="10" rx="3" fill="#f59e0b" opacity="0.9"/>
+  <text x="820" y="364" fill="#fbbf24" font-size="12" font-weight="600">← Kapton / PTFE Tape</text>
+
+  <!-- Clearance Callout (2.5 - 3.0 mm Sensor-to-Weld Clearance) -->
+  <line x1="412" y1="318" x2="412" y2="412" stroke="#c084fc" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="242" y="374" width="164" height="22" rx="4" fill="#1e293b"/>
+  <text x="402" y="389" text-anchor="end" fill="#d8b4fe" font-size="12" font-weight="600">2.5–3.0 mm Sensor Lift-Off</text>
+
+  <!-- Ferromagnetic Steel Workpiece & Weld Bead -->
+  <rect x="100" y="412" width="800" height="120" rx="4" fill="url(#workpieceGrad)" stroke="#64748b" stroke-width="2"/>
+  <text x="120" y="438" fill="#cbd5e1" font-size="13" font-weight="700">FERROMAGNETIC STEEL WORKPIECE</text>
+
+  <!-- Weld Crown -->
+  <path d="M 435 412 Q 500 390 565 412 Z" fill="#475569" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Crack / Discontinuity in Weld -->
+  <path d="M 488 404 L 480 432 L 490 450 L 483 472" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  <text x="500" y="495" text-anchor="middle" fill="#f87171" font-size="13" font-weight="700">HAIRLINE CRACK / SLAG IN WELD</text>
+
+  <!-- Main Magnetic Flux Lines in Steel -->
+  <path d="M 290 342 L 290 465 Q 290 515 500 515 Q 710 515 710 465 L 710 342" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="8,5" marker-mid="url(#fluxArrow)"/>
+  <rect x="180" y="478" width="128" height="22" rx="4" fill="#1e293b"/>
+  <text x="244" y="494" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="700">Primary Flux (B)</text>
+
+  <!-- Magnetic Flux Leakage (B_leakage) curving up into Sensor 1 & Sensor 2 -->
+  <path d="M 430 430 Q 485 335 555 430" fill="none" stroke="#facc15" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#leakArrow)"/>
+  <rect x="572" y="380" width="195" height="22" rx="4" fill="#1e293b"/>
+  <text x="578" y="395" fill="#fef08a" font-size="12" font-weight="700">← Flux Leakage (ΔB = B1 − B2)</text>
+
+  <!-- S49E Pinout Legend Box at Bottom -->
+  <rect x="100" y="555" width="800" height="66" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="120" y="580" fill="#f8fafc" font-size="13" font-weight="700">S49E (SS49E) Linear Hall Sensor Pinout (Flat Branded Face Forward, Leads Down):</text>
+  <circle cx="130" cy="603" r="5" fill="#ef4444"/>
+  <text x="142" y="607" fill="#cbd5e1" font-size="12"><tspan font-weight="700" fill="#f87171">Pin 1 (Left):</tspan> VCC (3.3V)</text>
+  <circle cx="320" cy="603" r="5" fill="#94a3b8"/>
+  <text x="332" y="607" fill="#cbd5e1" font-size="12"><tspan font-weight="700" fill="#e2e8f0">Pin 2 (Center):</tspan> GND</text>
+  <circle cx="500" cy="603" r="5" fill="#facc15"/>
+  <text x="512" y="607" fill="#cbd5e1" font-size="12"><tspan font-weight="700" fill="#fde047">Pin 3 (Right):</tspan> Analog Signal OUT (Sensor 1 → GP26, Sensor 2 → GP27)</text>
+</svg>
