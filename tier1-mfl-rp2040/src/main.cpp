@@ -108,9 +108,9 @@ void calibrate() {
   ledRGB.show();
 
   display.clearDisplay();
-  display.setTextSize(2);
-  display.setCursor(10, 22);
-  display.print("TARING...");
+  display.setTextSize(1);
+  display.setCursor(22, 28);
+  display.print("CALIBRATING...");
   display.display();
 
   long diffSum = 0;
